@@ -7,7 +7,6 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     height: 100vh;
     margin: 0;
@@ -23,8 +22,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 70vh;
-    border-radius: 50px;
+    height: 80vh;
+    border-radius: 60px;
     color: aliceblue;
     cursor: pointer;
     /* initially set it to flex:0.5 */
@@ -32,6 +31,7 @@ body {
     /* add a margin to separate them  */
     margin: 12px;
     position: relative;
+    align-items: center;
     transition: flex 0.7s ease-in;
 
 }
