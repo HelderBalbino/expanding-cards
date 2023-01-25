@@ -6,8 +6,66 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     height: 100vh;
     margin: 0;
     overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 70vh;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    border-radius: 50px;
+    color: aliceblue;
+    cursor: pointer;
+    /* initially set it to flex:0.5 */
+    flex: 0.5;
+    /* add a margin to separate them  */
+    margin: 12px;
+    position: relative;
+    transition: flex 0.7 ease-in;
+
+}
+
+/* selects all the h3s */
+.panel h3 {
+    font-size: 26px;
+    position: absolute;
+    /* push the h3 from the bottom */
+    bottom: 20px;
+    /* push the h3 from the left */
+    left: 19px;
+    margin: 0;
+    opacity: 0;
+
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+}
+
+/* add a media query to remove the last 2 cards on smaller screens */
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    /* select the last 2 cards */
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+
 }
