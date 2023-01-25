@@ -1,6 +1,7 @@
 /* universal selector */
 * {
     box-sizing: border-box;
+    background-color: black;
 }
 
 body {
@@ -31,7 +32,7 @@ body {
     /* add a margin to separate them  */
     margin: 12px;
     position: relative;
-    transition: flex 0.7 ease-in;
+    transition: flex 0.7s ease-in;
 
 }
 
@@ -54,6 +55,8 @@ body {
 
 .panel.active h3 {
     opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+    background-color: transparent;
 }
 
 /* add a media query to remove the last 2 cards on smaller screens */
